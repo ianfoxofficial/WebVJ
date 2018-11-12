@@ -27,8 +27,8 @@ export class CanvasComponent implements AfterViewInit  {
 
    // const layer1 = new BasicDrawlayer(this.app);
     const layer2 = new VideoDrawLayer(this.app);
-    // layer1.width = 500;
-    // layer1.height = 500;
+    //layer1.width = 500;
+    //layer1.height = 500;
     layer2.width = this.app.renderer.width;
     layer2.height = this.app.renderer.height;
     layer2.x = 0;
@@ -37,13 +37,14 @@ export class CanvasComponent implements AfterViewInit  {
   //  layer2.speedByRuntime = true;
   //  layer2.desiredRuntime = this.helperService.getSecondsFromBeats(4, 128);
 
-    // this.app.stage.addChild(layer1.gfx);
+    //this.app.stage.addChild(layer1.gfx);
     this.app.stage.addChild(layer2.gfx);
+    
 
 
     const fadeLength = this.helperService.getSecondsFromBeats(4, 128);
-
     const ticker = this.app.ticker;
+
     ticker.add(function(delta) {
       // delta is 1 if running at 100% performance
       // creates frame-independent transformation

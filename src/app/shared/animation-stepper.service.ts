@@ -14,7 +14,15 @@ export class AnimationStepperService {
 
     if (current >= max) {
       current = min;
+
+
+
     }
+
+
+
+
+
 
     return current + step;
   }
